@@ -115,8 +115,8 @@ src/
 tumuladeepak/springapplication
 
 ### Tags used:
-  latest
-  github commit SHA
-  branch name
+  - latest  
+  - github commit SHA  
+  - branch name  
 ## Environment Variable (Kubernetes)
-Example :ENV_VALUE = Hello from AWS Cluster Kubernetes using CI-CD!!
+Example : ENV_VALUE = Hello from AWS Cluster Kubernetes using CI-CD!!

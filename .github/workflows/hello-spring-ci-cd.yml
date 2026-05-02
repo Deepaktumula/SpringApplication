@@ -3,10 +3,10 @@ name: Hello Spring Boot App to AWS EKS
 on:
   workflow_dispatch:
   push:
-#    branches:
-#      - master
-    paths:
-      - .
+    branches:
+      - master
+#    paths:
+#      - .
 
 jobs:
   build-test:
@@ -89,5 +89,12 @@ jobs:
       - name: Verify the connection to AWS EKS
         run: kubectl get nodes
 
-      - name: Deploy to AWS (Kubernetes)
-        run: kubectl apply -f .
+      - name: Deploy new image to EKS
+        run: |
+          kubectl set image deployment/springapplication \
+            springapplication=${{ secrets.DOCKERHUB_USERNAME }}/springapplication:${{ github.sha }}
+
+      - name: Verify rollout
+        run: |
+          kubectl rollout status deployment/springapplication
+          kubectl get pods

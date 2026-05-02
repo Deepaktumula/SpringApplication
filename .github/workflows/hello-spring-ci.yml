@@ -1,6 +1,6 @@
 name: Hello Spring Boot App to Docker
 
-on: [push]
+on: [push, workflow_dispatch]
 
 jobs:
   build-test:

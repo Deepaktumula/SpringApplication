@@ -90,6 +90,8 @@ jobs:
 
       - name: Deploy new image to EKS
         run: |
+          kubectl apply -f app.yml
+          
           kubectl set image deployment/springapplication \
             springapplication=${{ secrets.DOCKERHUB_USERNAME }}/springapplication:${{ github.sha }}
 

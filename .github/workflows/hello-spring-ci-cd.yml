@@ -1,11 +1,15 @@
 name: Hello Spring Boot App to AWS EKS
 
-on: [workflow_dispatch]
+on:
+  workflow_dispatch:
 #  push:
 #    branches:
 #      - master
 #    paths:
-#      - .
+#      - "src/**"
+#      - "app.yml"
+#      - "Dockerfile"
+#      - "pom.xml"
 
 jobs:
   build-test:

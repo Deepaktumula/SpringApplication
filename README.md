@@ -48,12 +48,12 @@ GET /users
 ]
 ```
 ## Tech Stack
-Java 17+
-Spring Boot
-Maven
-Docker
-GitHub Actions
-AWS EKS (Kubernetes)
+- Java 17+
+- Spring Boot
+- Maven
+- Docker
+- GitHub Actions
+- AWS EKS (Kubernetes)
 
 ## Run Tests
 mvn clean test
